@@ -109,7 +109,7 @@ $("body").keypress(function(event){
 		if (pistola.municion != pistola.maxMunicion){
 			pistola.recargar();
 		}else{
-			console.log("No puedes recargar la pistola, porque tiene todas las balas");
+			console.log("No puedes recargar la pistola, porque tiene todas las balas o te has equipado la granada");
 		}
 	}else{
 		console.log("No has pulsado la tecla correcta, o has intentado atacar sin armas");
