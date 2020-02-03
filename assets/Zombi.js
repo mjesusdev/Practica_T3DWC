@@ -91,6 +91,7 @@ var granada = new Arma('Granada',20)
 var pistola = new ArmaConMunicion('Pistola',10,6);
 console.log("Bienvenido a StuDOOM v1.0");
 
+// Empieza la práctica
 // Determinar que arma se ha pulsado y equiparla
 $("#granada").click(function(){
 	jugador.equipar(granada);
@@ -105,12 +106,10 @@ $("body").keypress(function(event){
 	if (tecla=='d'){
 		jugador.atacar(z);
 	}else if(tecla=='r' && mochila.armas!=""){
-		if(jugador.arma.nombre == 'Pistola'){
-			if (this.municion == this.maxMunicion){
-				pistola.recargar();
-			}
+		if (pistola.municion != pistola.maxMunicion){
+			pistola.recargar();
 		}else{
-			console.log("No se puede recargar la granada");
+			console.log("No puedes recargar la pistola, porque tiene todas las balas");
 		}
 	}else{
 		console.log("No has pulsado la tecla correcta, o has intentado atacar sin armas");
